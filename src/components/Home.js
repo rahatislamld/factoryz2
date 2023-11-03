@@ -3,6 +3,7 @@ import { Dialog } from '@headlessui/react'
 import Footer from './Footer';
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -16,11 +17,55 @@ const navigation = [
       { name: 'Service 3', href: '/services/service3' },
     ],
   },
-  { name: 'Technologies', href: '/technologies', current: false },
+  { name: 'Our Work', href: '/technologies', current: false },
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Contact Us', href: '/contact-us', current: false },
   { name: 'About Us', href: '/about', current: false },
 ]
+
+const features = [
+  {
+    name: 'Mobile App Development',
+    description:
+      'Create cutting-edge mobile applications for Android and iOS platforms.',
+    icon: MobileIcon,
+  },
+  {
+    name: 'Full Stack Web Development',
+    description:
+      'End-to-end web development services, from front-end design to back-end implementation.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Machine Learning',
+    description:
+      'Leverage the power of AI and machine learning to gain insights and enhance your software.',
+    icon: ChipIcon,
+  },
+  {
+    name: 'Database Management',
+    description:
+      'Efficiently manage and optimize your data with our database solutions.',
+    icon: DatabaseIcon,
+  },
+  {
+    name: 'DevOps',
+    description:
+      'Streamline your development and operations for faster and more reliable software delivery.',
+    icon: TerminalIcon,
+  },
+  {
+    name: 'Quality Assurance and Testing',
+    description:
+      'Comprehensive testing services to ensure your software is robust, reliable, and bug-free.',
+    icon: BeakerIcon,
+  },
+];
+
+// You can use this 'features' array to display your services on the homepage.
+
+
+
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -34,10 +79,11 @@ export default function Example() {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                src=""
                 alt=""
               />
             </a>
+            <h1 className="text-4xl font-bold text-indigo-600">FactorYze</h1>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -129,22 +175,13 @@ export default function Example() {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-              Announcing our next round of funding.{' '}
-              <a href="#" className="font-semibold text-white">
-                <span className="absolute inset-0" aria-hidden="true" />
-                Read more <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
+         
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Data to enrich your online business
+            Enhance your online business with our cutting-edge software solutions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+            Our software company is dedicated to providing innovative technology solutions that empower businesses to thrive in the digital era. We specialize in developing custom software, mobile applications, and web solutions tailored to meet your unique needs.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -172,6 +209,81 @@ export default function Example() {
           />
         </div>
       </div>
+      <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Everything you need to deploy your app
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
+            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            {features.map((feature) => (
+              <div key={feature.name} className="relative pl-16">
+                <dt className="text-base font-semibold leading-7 text-gray-900">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                  </div>
+                  {feature.name}
+                </dt>
+                <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+          Trusted by the world’s most innovative teams
+        </h2>
+        <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+          <img
+            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+            alt="Transistor"
+            width={158}
+            height={48}
+          />
+          <img
+            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+            alt="Reform"
+            width={158}
+            height={48}
+          />
+          <img
+            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+            alt="Tuple"
+            width={158}
+            height={48}
+          />
+          <img
+            className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+            src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+            alt="SavvyCal"
+            width={158}
+            height={48}
+          />
+          <img
+            className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+            src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+            alt="Statamic"
+            width={158}
+            height={48}
+          />
+        </div>
+      </div>
+    </div>
+
+
       <Footer/>
     </div>
   )

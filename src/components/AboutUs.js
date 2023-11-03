@@ -27,79 +27,67 @@ const stats = [
 ]
 const values = [
   {
-    name: 'Be world-class.',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
+    name: 'Innovation Excellence.',
+    description: 'Our clients are at the center of everything we do. We listen, understand their needs, and deliver tailored software products that exceed their expectations..',
     icon: RocketLaunchIcon,
   },
   {
-    name: 'Take responsibility.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    name: 'Client Focus.',
+    description: 'Our clients are at the center of everything we do. We listen, understand their needs, and deliver tailored software products that exceed their expectations.',
     icon: HandRaisedIcon,
   },
   {
-    name: 'Be supportive.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus voluptas blanditiis et.',
+    name: 'Collaborative Teamwork.',
+    description: 'Collaboration is the key to our success. We foster a culture of teamwork, where diverse talents come together to create cohesive and efficient software development teams..',
     icon: UserGroupIcon,
   },
   {
-    name: 'Always learning.',
-    description: 'Iure sed ab. Aperiam optio placeat dolor facere. Officiis pariatur eveniet atque et dolor.',
+    name: 'Continuous Learning.',
+    description: 'In the fast-changing tech world, we never stop learning. Our team is dedicated to staying ahead by acquiring new skills and knowledge to stay at the forefront of software innovation.',
     icon: AcademicCapIcon,
   },
   {
-    name: 'Share everything you know.',
-    description: 'Laudantium tempora sint ut consectetur ratione. Ut illum ut rem numquam fuga delectus.',
+    name: 'Transparency and Integrity.',
+    description: 'We believe in transparent communication and ethical practices. Our integrity and honesty build trust with our clients, partners, and team members.',
     icon: SparklesIcon,
   },
   {
-    name: 'Enjoy downtime.',
-    description: 'Culpa dolorem voluptatem velit autem rerum qui et corrupti. Quibusdam quo placeat.',
+    name: 'Work-Life Balance.',
+    description: 'We value the well-being of our team. We promote a healthy work-life balance, ensuring our team members have the time to recharge and come back to work with renewed energy and creativity..',
     icon: SunIcon,
   },
 ]
 const team = [
   {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
+    name: 'Mohsin Ibne Amin',
+    role: 'Software Engineer',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    location: 'Toronto, Canada',
+    '/images/Mohsin.jpg',
+    location: 'Mobile Application devlopment, devops,Full Stack Web development',
+   
   },
   {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
+    name: 'Sakib Ahmed',
+    role: 'Software Engineer',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    location: 'Toronto, Canada',
+      '/images/Sakib.jpg',
+    location: 'Machine Learning, Database Design,Backend Developer',
   },
   {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
+    name: 'Hasnain Iqbal Shirsho',
+    role: 'Software Engineer',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    location: 'Toronto, Canada',
+      '/images/Shirsho.jpg',
+    location: 'Full Stack Web development, System Design',
   },
   {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
+    name: 'Fahad Hossain',
+    role: 'Software Engineer',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    location: 'Toronto, Canada',
+    '/images/Fahad.jpg',
+    location: 'UX/UI Specialist, Mobile App Development,Frontend Developer',
   },
-  {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    location: 'Toronto, Canada',
-  },
-  {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    location: 'Toronto, Canada',
-  },
+  
   // More people...
 ]
 const benefits = [
@@ -291,8 +279,7 @@ export default function Example() {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our values</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
-              dolor cupiditate blanditiis.
+            At FactorYze, we are guided by our core values that drive our success in the software industry. Our commitment to these principles defines who we are and how we work.
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
@@ -313,8 +300,7 @@ export default function Example() {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our team</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Excepturi repudiandae alias ut. Totam aut facilis. Praesentium in neque vel omnis. Eos error odio. Qui
-              fugit voluptatibus eum culpa.
+            Get to know the dedicated individuals who make up our team and drive our company's success.
             </p>
           </div>
           <ul
@@ -344,9 +330,9 @@ export default function Example() {
               <div className="w-full flex-auto">
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our team</h2>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                  Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis
-                  in accusamus quisquam.
-                </p>
+                Joining FactorYze means you'll enjoy numerous benefits and opportunities, including:
+          </p>
+                
                 <ul
                   role="list"
                   className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2"
@@ -359,7 +345,7 @@ export default function Example() {
                   ))}
                 </ul>
                 <div className="mt-10 flex">
-                  <a href="#" className="text-sm font-semibold leading-6 text-indigo-400">
+                  <a href="/job-posting" className="text-sm font-semibold leading-6 text-indigo-400">
                     See our job postings <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
