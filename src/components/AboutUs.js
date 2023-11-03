@@ -20,11 +20,12 @@ const navigation = [
   { name: 'Company', href: '#' },
 ]
 const stats = [
-  { label: 'Business was founded', value: '2012' },
-  { label: 'People on the team', value: '120+' },
-  { label: 'Users on the platform', value: '250k' },
-  { label: 'Paid out to creators', value: '$70M' },
-]
+  { label: 'Years of Software Experience', value: '1+' },
+  { label: 'Skilled Software Engineers', value: '6+' },
+  { label: 'Active Users', value: '0' },
+  { label: 'Total Revenue', value: '$00 Million' },
+];
+
 const values = [
   {
     name: 'Innovation Excellence.',
@@ -215,45 +216,35 @@ export default function Example() {
 
         {/* Header section */}
         <div className="px-6 pt-14 lg:px-8">
-          <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">We love creators</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
-            </p>
-          </div>
-        </div>
+  <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
+    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Our Mission</h2>
+    <p className="mt-6 text-lg leading-8 text-gray-300">
+      We are on a mission to revolutionize the software industry. Our team is dedicated to creating innovative software solutions that empower our clients and make a positive impact on the world.
+    </p>
+  </div>
+</div>
 
         {/* Content section */}
         <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none lg:grid-cols-2">
-              <div>
-                <p>
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                  vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                  erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                  semper sed amet vitae sed turpis id.
-                </p>
-                <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas.
-                </p>
-              </div>
-              <div>
-                <p>
-                  Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim
-                  eget. Est augue maecenas risus nulla ultrices congue nunc tortor. Enim et nesciunt doloremque nesciunt
-                  voluptate.
-                </p>
-                <p className="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                </p>
-              </div>
-            </div>
+  <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+    <div className="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none lg:grid-cols-2">
+      <div>
+        <p>
+          At FactorYze, we focus on excellence in software development. Our team of skilled engineers works collaboratively to deliver tailored software products that exceed our clients' expectations. We are committed to continuous learning to stay at the forefront of software innovation.
+        </p>
+        <p className="mt-8">
+          We believe in transparency and integrity, fostering a culture of teamwork, and promoting a healthy work-life balance for our team members. Our success is built on the trust we establish with our clients, partners, and team members.
+        </p>
+      </div>
+      <div>
+        <p>
+          Our team comprises passionate individuals who excel in various areas, from full-stack web development and machine learning to mobile application development and UX/UI design. We bring diverse talents together to create cohesive and efficient software development teams.
+        </p>
+        <p className="mt-8">
+          Join us on this exciting journey. We offer competitive salaries, flexible work hours, generous paid vacation, and a great work environment. See our job postings to become a part of our growing team.
+        </p>
+      </div>
+    </div>
             <dl className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
               {stats.map((stat, statIdx) => (
                 <div key={statIdx} className="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6">

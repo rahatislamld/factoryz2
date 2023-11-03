@@ -1,25 +1,25 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
 const navigation = [
-    { name: 'Home', href: '/', current: false },
+  { name: 'Home', href: '/', current: false },
   {
     name: 'Services',
     href: '/services',
-    current: true,
+    current: false,
     sublinks: [
       { name: 'Service 1', href: '/services/service1' },
       { name: 'Service 2', href: '/services/service2' },
       { name: 'Service 3', href: '/services/service3' },
     ],
   },
+  
   { name: 'Our Work', href: '/ourwork', current: false },
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Contact Us', href: '/contact-us', current: false },
   { name: 'About Us', href: '/about', current: false },
-
   // Add more links as needed
 ];
 
@@ -28,57 +28,32 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  return (
-    <Disclosure as="nav" className="bg-gray-800">
-      {({ open }) => (
-        <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <Link to="/" className="text-white text-xl font-bold">
-                    Factoryz{' '}
-                  </Link>
-                </div>
-              </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div className="flex space-x-4">
-                  {navigation.map((item) =>
-                    item.sublinks ? (
-                      <ServicesDropdown key={item.name} item={item} />
-                    ) : (
-                        <Link
-                        key={item.name}
-                        to={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white', // Add hover classes here
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </Link>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-          <Disclosure.Panel className="sm:hidden">
+  return (
+    <div className="bg-gray-800">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="relative flex h-16 items-center justify-between">
+          <div className="flex items-center">
+            <Link to="/" className="text-white text-3xl font-bold">
+              FactorYz
+            </Link>
+          </div>
+          <div className="sm:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              <span className="absolute -inset-0.5" />
+              <span className="sr-only">Open main menu</span>
+              {mobileMenuOpen ? (
+                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+          <div className={`sm:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) =>
                 item.sublinks ? (
@@ -87,23 +62,35 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover-bg-gray-700 hover:text-white',
-                      'block rounded-md px-3 py-2 text-base font-medium'
-                    )}
-                    aria-current={item.current ? 'page' : undefined}
+                    className="block rounded-md px-3 py-2 text-base font-medium"
                   >
                     {item.name}
                   </Link>
                 )
               )}
             </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+          </div>
+          <div className="hidden sm:flex space-x-4">
+            {navigation.map((item) =>
+              item.sublinks ? (
+                <ServicesDropdown key={item.name} item={item} />
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="rounded-md px-3 py-2 text-sm font-medium"
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
+
 
 function ServicesDropdown({ item }) {
   return (
@@ -113,16 +100,16 @@ function ServicesDropdown({ item }) {
           <Menu.Button
             as="button"
             className={classNames(
-              item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-              'rounded-md px-3 py-2 text-sm font-medium focus:outline-none'
+              item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover-bg-gray-700 hover:text-white',
+              'flex items-center rounded-md px-3 py-2 text-sm font-medium focus:outline-none'
             )}
           >
             {item.name}
-            <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+            <ChevronDownIcon className="h-5 w-5 ml-2 mt-1" aria-hidden="true" />
+
           </Menu.Button>
         </span>
       </div>
-
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"

@@ -28,37 +28,37 @@ const features = [
     name: 'Mobile App Development',
     description:
       'Create cutting-edge mobile applications for Android and iOS platforms.',
-    icon: MobileIcon,
+    icon: ArrowPathIcon,
   },
   {
     name: 'Full Stack Web Development',
     description:
       'End-to-end web development services, from front-end design to back-end implementation.',
-    icon: GlobeAltIcon,
+    icon: ArrowPathIcon,
   },
   {
     name: 'Machine Learning',
     description:
       'Leverage the power of AI and machine learning to gain insights and enhance your software.',
-    icon: ChipIcon,
+    icon: ArrowPathIcon,
   },
   {
     name: 'Database Management',
     description:
       'Efficiently manage and optimize your data with our database solutions.',
-    icon: DatabaseIcon,
+    icon: ArrowPathIcon,
   },
   {
     name: 'DevOps',
     description:
       'Streamline your development and operations for faster and more reliable software delivery.',
-    icon: TerminalIcon,
+    icon: ArrowPathIcon,
   },
   {
     name: 'Quality Assurance and Testing',
     description:
       'Comprehensive testing services to ensure your software is robust, reliable, and bug-free.',
-    icon: BeakerIcon,
+    icon: ArrowPathIcon,
   },
 ];
 
@@ -102,11 +102,7 @@ export default function Example() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-white">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+          
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
@@ -142,14 +138,7 @@ export default function Example() {
                     </a>
                   ))}
                 </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                  >
-                    Log in
-                  </a>
-                </div>
+              
               </div>
             </div>
           </Dialog.Panel>
@@ -183,17 +172,7 @@ export default function Example() {
             <p className="mt-6 text-lg leading-8 text-gray-300">
             Our software company is dedicated to providing innovative technology solutions that empower businesses to thrive in the digital era. We specialize in developing custom software, mobile applications, and web solutions tailored to meet your unique needs.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-              >
-                Get started
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-white">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
+            
           </div>
         </div>
         <div
@@ -212,13 +191,14 @@ export default function Example() {
       <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">Empower Your Projects</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to deploy your app
+          Comprehensive Solutions for Your Software Development Needs
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+            Elevate your projects with our expertise in mobile app development, full-stack web solutions, machine learning,
+      database management, DevOps, and rigorous quality assurance and testing. We provide end-to-end services to bring
+      your ideas to life and deploy robust applications seamlessly.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

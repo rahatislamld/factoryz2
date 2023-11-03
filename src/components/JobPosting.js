@@ -40,10 +40,7 @@ const jobOpenings = [
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 We're always on the lookout for talented individuals to join our dynamic team. Check out our current job openings below.
               </h2>
-              <p className="mt-6 text-xl leading-8 text-gray-600">
-                Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod lacus. Est non placerat nam arcu.
-                Cras purus nibh cursus sit eu in id.
-              </p>
+              
               <img
                 src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80"
                 alt=""
