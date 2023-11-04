@@ -9,14 +9,16 @@ const navigation = [
     name: 'Services',
     href: '/services',
     current: false,
-    sublinks: [
-      { name: 'Service 1', href: '/services/service1' },
-      { name: 'Service 2', href: '/services/service2' },
-      { name: 'Service 3', href: '/services/service3' },
-    ],
+  
   },
   
-  { name: 'Our Work', href: '/ourwork', current: false },
+  { name: 'Our Work', href: '/ourwork', current: false, sublinks: [
+    { name: 'Mobile Development', href: '/services/service1' },
+    { name: 'Web Development', href: '/services/service2' },
+    { name: 'Database', href: '/services/service3' },
+    { name: 'Machine Learning', href: '/services/service3' },
+  ], },
+  
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Contact Us', href: '/contact-us', current: false },
   { name: 'About Us', href: '/about', current: false },
@@ -36,7 +38,7 @@ const Navbar = () => {
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="text-white text-3xl font-bold">
-              FactorYz
+              FactorYz{' '}
             </Link>
           </div>
           <div className="sm:hidden">
@@ -62,7 +64,11 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="block rounded-md px-3 py-2 text-base font-medium"
+                    className={classNames(
+                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover-bg-gray-700 hover:text-white',
+                      'block rounded-md px-3 py-2 text-base font-medium'
+                    )}
+                    aria-current={item.current ? 'page' : undefined}
                   >
                     {item.name}
                   </Link>
@@ -78,7 +84,11 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="rounded-md px-3 py-2 text-sm font-medium"
+                  className={classNames(
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover-bg-gray-700 hover:text-white',
+                    'rounded-md px-3 py-2 text-sm font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
                 </Link>
@@ -90,7 +100,6 @@ const Navbar = () => {
     </div>
   );
 };
-
 
 function ServicesDropdown({ item }) {
   return (
@@ -142,5 +151,6 @@ function ServicesDropdown({ item }) {
     </Menu>
   );
 }
+
 
 export default Navbar;
