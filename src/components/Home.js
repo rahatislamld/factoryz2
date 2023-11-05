@@ -3,6 +3,8 @@ import { Dialog } from '@headlessui/react'
 import Footer from './Footer';
 import { motion } from 'framer-motion';
 
+
+
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 
@@ -11,18 +13,23 @@ const navigation = [
   {
     name: 'Services',
     href: '/services',
-    current: true,
-    sublinks: [
-      { name: 'Service 1', href: '/services/service1' },
-      { name: 'Service 2', href: '/services/service2' },
-      { name: 'Service 3', href: '/services/service3' },
-    ],
+    current: false,
+  
   },
-  { name: 'Our Work', href: '/technologies', current: false },
+  
+  { name: 'Our Work', href: '/ourwork', current: false, sublinks: [
+    { name: 'Mobile Development', href: '/services/service1' },
+    { name: 'Web Development', href: '/services/service2' },
+    { name: 'Database', href: '/services/service3' },
+    { name: 'Machine Learning', href: '/services/service3' },
+  ], },
+  
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Contact Us', href: '/contact-us', current: false },
   { name: 'About Us', href: '/about', current: false },
-]
+  // Add more links as needed
+];
+
 
 const features = [
   {
@@ -61,18 +68,66 @@ const features = [
       'Comprehensive testing services to ensure your software is robust, reliable, and bug-free.',
     icon: ArrowPathIcon,
   },
+]
+const services = [
+  {
+    title: 'Mobile App Development',
+    description:
+      'Create cutting-edge mobile applications for Android and iOS platforms.',
+    icon: ArrowPathIcon, // Replace with the appropriate icon component
+  },
+  {
+    title: 'Full Stack Web Development',
+    description:
+      'End-to-end web development services, from front-end design to back-end implementation.',
+    icon: ArrowPathIcon, // Replace with the appropriate icon component
+  },
+  {
+    title: 'Machine Learning',
+    description:
+      'Leverage the power of AI and machine learning to gain insights and enhance your software.',
+    icon: ArrowPathIcon, // Replace with the appropriate icon component
+  },
+  {
+    title: 'Database Management',
+    description:
+      'Efficiently manage and optimize your data with our database solutions.',
+    icon: ArrowPathIcon, // Replace with the appropriate icon component
+  },
+  {
+    title: 'DevOps',
+    description:
+      'Streamline your development and operations for faster and more reliable software delivery.',
+    icon: ArrowPathIcon, // Replace with the appropriate icon component
+  },
+  {
+    title: 'Quality Assurance and Testing',
+    description:
+      'Comprehensive testing services to ensure your software is robust, reliable, and bug-free.',
+    icon: ArrowPathIcon, // Replace with the appropriate icon component
+  },
+  {
+    title: 'Cloud Services',
+    description:
+      'Harness the power of cloud computing for scalable and flexible solutions.',
+    icon: ArrowPathIcon, // Replace with the appropriate icon component
+  },
+  {
+    title: 'UI/UX Design',
+    description:
+      'Create visually stunning and user-friendly interfaces for your applications.',
+    icon: ArrowPathIcon, // Replace with the appropriate icon component
+  },
 ];
+
 
 // You can use this 'features' array to display your services on the homepage.
 
 
 
-
 export default function Example() {
-  const featureVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 },
-  };
+ 
+  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -193,52 +248,42 @@ export default function Example() {
           />
         </div>
       </div>
-      <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">Empower Your Projects</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Comprehensive Solutions for Your Software Development Needs
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Elevate your projects with our expertise in mobile app development, full-stack web solutions, machine learning, database management, DevOps, and rigorous quality assurance and testing. We provide end-to-end services to bring your ideas to life and deploy robust applications seamlessly.
-          </p>
-        </div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={featureVariants}
-          className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
+      
+      <div>
+      {/* Your existing code here */}
+      <section className="bg-gray-900 text-white py-16">
+  <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-2xl font-semibold leading-7 text-indigo-600">Empower Your Projects</h2>
+    <p className="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">
+      Comprehensive Solutions for Your Software Development Needs
+    </p>
+    <p className="mt-6 text-lg leading-8 text-gray-300">
+      Elevate your projects with our expertise in mobile app development, full-stack web solutions, machine learning, database management, DevOps, and rigorous quality assurance and testing. We provide end-to-end services to bring your ideas to life and deploy robust applications seamlessly.
+    </p>
+  </div>
+</section>
+
+
+<section className="bg-gray-900 text-gray-100 py-16">
+  <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Our Services</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className="bg-indigo-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
         >
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.name}
-                variants={featureVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.2 * index }}
-                className="relative pl-16"
-              >
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
-                  >
-                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </motion.div>
-                  {feature.name}
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
-              </motion.div>
-            ))}
-          </dl>
-        </motion.div>
-      </div>
+          <i className={`text-4xl text-white ${service.icon} mb-4`}></i>
+          <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+          <p className="text-gray-300">{service.description}</p>
+        </div>
+      ))}
     </div>
-   
+  </div>
+</section>
+
+    </div>
+
 
 
       <Footer/>

@@ -64,7 +64,7 @@ const team = [
     role: 'Software Engineer',
     imageUrl:
     '/images/Mohsin.jpg',
-    location: 'Mobile Application devlopment, devops,Full Stack Web development',
+    location: 'Mobile Application developer,devops,Full Stack Web developer',
    
   },
   {
@@ -72,21 +72,21 @@ const team = [
     role: 'Software Engineer',
     imageUrl:
       '/images/Sakib.jpg',
-    location: 'Machine Learning, Database Design,Backend Developer',
+    location: 'Machine Learning, Database Designer,Backend Developer',
   },
   {
     name: 'Hasnain Iqbal Shirsho',
     role: 'Software Engineer',
     imageUrl:
       '/images/Shirsho.jpg',
-    location: 'Full Stack Web development, System Design',
+    location: 'Full Stack Web developer,   System Designer',
   },
   {
     name: 'Fahad Hossain',
     role: 'Software Engineer',
     imageUrl:
     '/images/Fahad.jpg',
-    location: 'UX/UI Specialist, Mobile App Development,Frontend Developer',
+    location: 'UX/UI Specialist, Mobile App Developer,Frontend Developer',
   },
   
   // More people...
@@ -286,28 +286,43 @@ export default function Example() {
           </dl>
         </div>
 
-        {/* Team section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our team</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-            Get to know the dedicated individuals who make up our team and drive our company's success.
-            </p>
+ {/* Team section */}
+<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+  <div className="mx-auto max-w-2xl lg:mx-0">
+    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our team</h2>
+    <p className="mt-6 text-lg leading-8 text-gray-300">
+      Get to know the dedicated individuals who make up our team and drive our company's success.
+    </p>
+  </div>
+  <ul
+    role="list"
+    className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
+  >
+    {team.map((person) => (
+      <li
+        key={person.name}
+        className="group relative cursor-pointer transform transition-transform hover:-translate-y-2 hover:shadow-lg hover:scale-105"
+      >
+        <img
+          className="aspect-[14/13] w-full rounded-2xl object-cover"
+          src={person.imageUrl}
+          alt={person.name}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex flex-col justify-center h-full text-center">
+            <h3 className="text-lg font-semibold leading-8 tracking-tight text-white">
+              {person.name}
+            </h3>
+            <p className="text-base leading-7 text-gray-100">{person.role}</p>
+            <p className="text-sm leading-6 text-gray-200">{person.location}</p>
           </div>
-          <ul
-            role="list"
-            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
-          >
-            {team.map((person) => (
-              <li key={person.name}>
-                <img className="aspect-[14/13] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{person.name}</h3>
-                <p className="text-base leading-7 text-gray-300">{person.role}</p>
-                <p className="text-sm leading-6 text-gray-500">{person.location}</p>
-              </li>
-            ))}
-          </ul>
         </div>
+      </li>
+    ))}
+  </ul>
+</div>
+
+
 
         {/* CTA section */}
         <div className="relative isolate -z-10 mt-32 sm:mt-40">

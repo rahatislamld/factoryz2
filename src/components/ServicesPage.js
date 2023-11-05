@@ -1,6 +1,7 @@
 import React from 'react';
 import ServiceSection from './ServiceSection';
 import Navbar from './Navigation';
+import Footer from './Footer';
 
 
 
@@ -116,6 +117,7 @@ const ServicesPage = () => {
         />
       ))}
     </div>
+    <Footer/>
   </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServiceSection = ({ title, description, subSections }) => {
   return (
-    <div className="bg-gray-900 p-8 mb-8 text-white">
+    <div className="bg-gray-900 p-8 mb-8 text-indigo-600">
       <h1 className="text-3xl font-bold">{title}</h1>
       <p className="text-gray-300 mt-4">{description}</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
